@@ -1,0 +1,24 @@
+server:
+  port: 39975
+mysql:
+  host: <your_mysql_host>
+  port: <your_mysql_port>
+  username: <your_mysql_username>
+  password: <your_mysql_password>
+  database: <your_mysql_database>
+redis:
+  host: <your_redis_host>
+  port: <your_redis_port>
+  password: <your_redis_password>
+  db: 0
+logger:
+  path: logs
+  level: debug
+model:
+  base_url: https://api-inference.modelscope.cn/v1
+  model_id: Qwen/Qwen3.5-35B-A3B
+  api_key: <your_model_api_key>
+auth:
+  token_name: Authorization
+  timeout: 2592000
+  renew: 3600
