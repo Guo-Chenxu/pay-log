@@ -76,6 +76,8 @@ go run main.go
 
 服务会根据 `config.yaml` 中的 `server.port` 启动，默认示例端口为 `39975`。
 
+> 启动后端前需要先构建前端 `make build-web`
+
 ### 3. 启动前端开发服务
 
 在 `web` 目录执行：
