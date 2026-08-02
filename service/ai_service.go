@@ -80,6 +80,10 @@ func (s *AIService) TriggerAISummary(ctx context.Context, userID int64, startYea
 		logger.CtxErrorf(ctx, "list bills for AI prompt failed: %v", err)
 		bills = nil
 	}
+	if len(bills) == 0 {
+		logger.CtxInfof(ctx, "no bills found for AI prompt for user %d from %d/%d to %d/%d", userID, startYear, startMonth, endYear, endMonth)
+		return nil
+	}	
 
 	prompt := buildPrompt(summaries, bills, startYear, startMonth, endYear, endMonth)
 	analysis := callAI(ctx, prompt)
