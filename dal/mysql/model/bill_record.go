@@ -14,7 +14,7 @@ type BillRecord struct {
 	Amount          int64     `gorm:"type:bigint;not null;index:idx_user_dedup"` // cents
 	PaymentMethod   string    `gorm:"size:64"`
 	Status          string    `gorm:"size:32"`
-	OrderNo         string    `gorm:"size:64"`
+	OrderNo         string    `gorm:"size:128"`
 	MerchantOrderNo string    `gorm:"size:64"`
 	Remark          string    `gorm:"size:256"`
 	IsInvestment    bool      `gorm:"type:tinyint(1);not null;default:0"`
